@@ -24,6 +24,23 @@ def test_greet_rejects_empty_name(name: str) -> None:
         greet(name)
 
 
+@pytest.mark.parametrize(
+    ("greeting", "expected"),
+    [
+        ("Hi", "Hi, Ada!"),
+        ("  Ciao  ", "Ciao, Ada!"),
+    ],
+)
+def test_greet_with_custom_greeting(greeting: str, expected: str) -> None:
+    assert greet("Ada", greeting) == expected
+
+
+@pytest.mark.parametrize("greeting", ["", "   "])
+def test_greet_rejects_empty_greeting(greeting: str) -> None:
+    with pytest.raises(ValueError, match="greeting must not be empty"):
+        greet("Ada", greeting)
+
+
 def test_version_is_a_string() -> None:
     assert isinstance(__version__, str)
     assert __version__

@@ -22,7 +22,8 @@ cd <repo>
 uv sync                      # installs dependencies (including dev group)
 uv run pre-commit install --hook-type pre-commit --hook-type commit-msg
 uv run pytest                # runs the tests
-uv run first_claude_project --name Ada # runs the example CLI
+uv run first_claude_project --name Ada # runs the example CLI (Hello, Ada!)
+uv run first_claude_project --name Ada --greet Hi # custom greeting (Hi, Ada!)
 ```
 
 ## Layout
