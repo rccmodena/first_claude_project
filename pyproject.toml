@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "first_claude_project"
 version = "0.2.1"
-description = "Short description of what the project does."
+description = "A small, typed Python CLI that prints a configurable greeting, built to practice a complete development workflow with Claude Code."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []

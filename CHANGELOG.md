@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- README now uses the project name FIRST CLAUDE PROJECT and describes what the
+  project is, with a usage example; `pyproject.toml` has the same description. (#11)
+
 ## [0.2.1] - 2026-11-21
 
 ### Added
