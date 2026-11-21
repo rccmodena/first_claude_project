@@ -13,6 +13,7 @@
 | [docs/issues.md](docs/issues.md) | How to use Issues, labels and milestones |
 | [docs/claude-code.md](docs/claude-code.md) | How to work with Claude Code in this project |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | One-page summary for contributors |
+| [CHANGELOG.md](CHANGELOG.md) | Notable changes in each version |
 
 ## Quick start
 
