@@ -5,12 +5,17 @@ import sys
 from collections.abc import Sequence
 
 from first_claude_project import __version__
-from first_claude_project.core import greet
+from first_claude_project.core import DEFAULT_GREETING, greet
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="first_claude_project", description="Example CLI.")
     parser.add_argument("--name", default="world", help="who to greet (default: %(default)s)")
+    parser.add_argument(
+        "--greet",
+        default=DEFAULT_GREETING,
+        help="greeting word to use (default: %(default)s)",
+    )
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     return parser
 
@@ -19,7 +24,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     """Run the CLI and return a process exit code."""
     args = build_parser().parse_args(argv)
     try:
-        print(greet(args.name))
+        print(greet(args.name, args.greet))
     except ValueError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
